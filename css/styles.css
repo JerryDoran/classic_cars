@@ -39,6 +39,7 @@ section {
   position: relative;
   left: 0;
   margin-bottom: 3rem;
+  padding: 5rem 0;
   transform-origin: left;
   box-shadow: 0 0.5rem 0.5rem 1rem #aaa;
   transition: left 0.5s, transform 0.5s;
@@ -179,8 +180,8 @@ section.change {
 
 .card-img {
   width: 100%;
-  opacity: .8;
-  transition: opacity .5s;
+  opacity: 0.8;
+  transition: opacity 0.5s;
 }
 
 .card:hover .card-img {
@@ -190,20 +191,102 @@ section.change {
 .car-price {
   font-size: 1.8rem;
   color: #777;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .card-btn {
   width: 100%;
   background-color: #fff;
   font-size: 1.7rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
   border: none;
   margin-top: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   color: #fff;
-  text-shadow: .1rem .1rem .3rem #000;
-  box-shadow: .1rem .1rem .5rem #bbb;
+  text-shadow: 0.1rem 0.1rem 0.3rem #000;
+  box-shadow: 0.1rem 0.1rem 0.5rem #bbb;
   cursor: pointer;
+}
+
+/* Section Three - Video Gallery */
+
+.section-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #222;
+}
+.video {
+  width: 25%;
+  margin: 0 2rem;
+  border-radius: 0.5rem;
+  opacity: 0.7;
+  box-shadow: 0.3rem 0.3rem 0.5rem #111;
+  transition: all 0.5s;
+}
+
+.video:hover {
+  opacity: 1;
+  box-shadow: 0.5rem 0.5rem 1rem #111;
+}
+
+/* Section Four - Image Gallery */
+.section-four {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-wrapper {
+  margin: 10rem 0;
+  perspective: 10rem;
+}
+
+.gallery-shelf {
+  width: 80%;
+  height: 3rem;
+  background-color: rgba(38, 126, 199, 0.8);
+  margin: auto;
+  position: relative;
+  box-shadow: 1rem 1rem 5rem #444;
+}
+
+.gallery-shelf::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-color: rgba(34, 152, 248, 0.7);
+  top: -10rem;
+  transform: rotateX(20deg);
+  transform-origin: bottom;
+}
+
+.gallery-wrapper img {
+  width: 15%;
+  position: absolute;
+  bottom: 6rem;
+  transform: translateX(-50%) rotateX(0.5deg);
+  box-shadow: 0.2rem -0.2rem 0.5rem #888;
+  border-radius: 0.5rem;
+  transform-origin: bottom;
+  transition: all 0.3s;
+}
+
+.gallery-wrapper img:hover {
+  transform: translateX(-50%) rotateX(0);
+  box-shadow: 0 0.2rem 0.3rem #888;
+}
+
+.gallery-img-1 {
+  left: 50%;
+}
+
+.gallery-img-2 {
+  left: 30%;
+}
+
+.gallery-img-3 {
+  left: 70%;
 }
